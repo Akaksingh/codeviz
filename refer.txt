@@ -1,0 +1,21 @@
+# Create project folder
+mkdir codeviz
+cd codeviz
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install initial dependencies
+pip install fastapi uvicorn python-multipart
+```
+
+### 2. **Create basic project structure**
+```
+codeviz/
+├── main.py              # Start here - your first API
+├── parsers/
+│   └── python_parser.py # Code analysis logic
+├── requirements.txt     # Dependencies
+└── tests/
+    └── test_parser.py   # Test with sample code
