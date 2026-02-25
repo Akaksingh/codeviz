@@ -6,31 +6,31 @@ A production-ready FastAPI backend that analyzes Python code and generates inter
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green.svg)
 ![Tests](https://img.shields.io/badge/Tests-Passing-brightgreen.svg)
 
-## 🚀 Features
+##  Features
 
 ### Core Functionality
-- **📁 File Upload** - Accept Python (.py) file uploads via REST API
-- **🔍 AST Analysis** - Deep code structure analysis using Python's Abstract Syntax Tree
-- **📊 Architecture Diagrams** - Generate multiple diagram types in Mermaid format:
+- **File Upload** - Accept Python (.py) file uploads via REST API
+- **AST Analysis** - Deep code structure analysis using Python's Abstract Syntax Tree
+- **Architecture Diagrams** - Generate multiple diagram types in Mermaid format:
   - **Class Diagrams** - Classes, methods, inheritance relationships
   - **Dependency Graphs** - Import relationships and external dependencies  
   - **Component Diagrams** - High-level architecture overview
   - **Function Call Diagrams** - Function call flow visualization
 
 ### Advanced Analysis
-- **🔗 Relationship Detection** - Inheritance, composition, function calls
-- **📈 Complexity Metrics** - Coupling scores, inheritance depth, complexity analysis
-- **🏷️ Pattern Recognition** - Detect MVC, Service Layer, Repository patterns
-- **📝 AI-Ready Summaries** - Human-readable architecture descriptions
+- **Relationship Detection** - Inheritance, composition, function calls
+- **Complexity Metrics** - Coupling scores, inheritance depth, complexity analysis
+- **Pattern Recognition** - Detect MVC, Service Layer, Repository patterns
+- **AI-Ready Summaries** - Human-readable architecture descriptions
 
 ### Production Features
-- **⚡ Async/Await** - High-performance async request handling
-- **🛡️ Error Handling** - Comprehensive error handling with proper HTTP codes
-- **📋 Input Validation** - File type, size, and syntax validation
-- **📊 Logging & Monitoring** - Structured logging with request tracking
-- **🧪 Test Coverage** - Comprehensive unit and integration tests
+- **Async/Await** - High-performance async request handling
+- **Error Handling** - Comprehensive error handling with proper HTTP codes
+- **Input Validation** - File type, size, and syntax validation
+- **Logging & Monitoring** - Structured logging with request tracking
+- ** Test Coverage** - Comprehensive unit and integration tests
 
-## 🏗️ Architecture
+##  Architecture
 
 ### Project Structure
 ```
@@ -61,7 +61,7 @@ codeviz/
 6. Return JSON with diagram + analysis metadata
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Python 3.9+
@@ -95,7 +95,7 @@ codeviz/
    - **Alternative Docs**: http://localhost:8000/redoc  
    - **Health Check**: http://localhost:8000/health
 
-## 📡 API Endpoints
+##  API Endpoints
 
 ### Core Endpoints
 
@@ -239,7 +239,7 @@ graph LR
     create_user --> save_to_db
 ```
 
-## 🧪 Testing
+##  Testing
 
 ### Run Tests
 ```bash
@@ -262,7 +262,7 @@ python tests/tests_parser.py
 - **Edge Cases**: Empty files, syntax errors, complex inheritance
 - **API Tests**: Endpoint validation and error handling
 
-## 🔧 Configuration
+##  Configuration
 
 ### Environment Variables
 Create a `.env` file for configuration:
@@ -289,7 +289,7 @@ LOG_FORMAT=json
 # REDIS_URL=redis://localhost:6379
 ```
 
-## 🚀 Deployment
+##  Deployment
 
 ### Docker Deployment
 ```dockerfile
@@ -337,7 +337,7 @@ railway init
 railway up
 ```
 
-## 🤝 Contributing
+##  Contributing
 
 ### Development Setup
 1. Fork the repository
@@ -364,7 +364,7 @@ mypy parsers/ generators/ main.py
 3. **New Language Support**: Create new parser modules
 4. **AI Integration**: Add AI summary modules
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 ### Typical Performance
 - **Small files** (<100 lines): < 50ms
@@ -378,9 +378,9 @@ mypy parsers/ generators/ main.py
 - Response caching (ready for Redis)
 - Background task support
 
-## 🗺️ Roadmap
+##  Roadmap
 
-### Phase 1: Current (MVP) ✅
+### Phase 1: Current (MVP) 
 - [x] Core AST parsing
 - [x] Basic diagram generation
 - [x] REST API endpoints
@@ -411,7 +411,7 @@ mypy parsers/ generators/ main.py
 - [ ] Integration with IDEs
 - [ ] Architectural linting
 
-## 📄 License
+## 📄License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
@@ -421,7 +421,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - GitHub: [@Akaksingh](https://github.com/Akaksingh)
 - Project: [CodeViz](https://github.com/Akaksingh/codeviz)
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - [FastAPI](https://fastapi.tiangolo.com/) - Modern Python web framework
 - [Mermaid.js](https://mermaid.js.org/) - Diagram syntax and rendering
@@ -429,4 +429,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**⭐ Star this repository if you find it helpful!**
+**Star this repository if you find it helpful!**
