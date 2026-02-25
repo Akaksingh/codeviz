@@ -351,8 +351,6 @@ async def generate_diagrams(
             detail=f"Diagram generation failed: {str(e)}"
         )
 
-
-# Legacy endpoint for backward compatibility
 @app.post("/analayze")
 async def analyze_code_legacy(file: UploadFile = File(...)):
     """Legacy endpoint - redirects to /analyze"""
@@ -387,7 +385,6 @@ async def internal_server_error_handler(request, exc):
     )
 
 
-# For development and testing
 if __name__ == "__main__":
     import uvicorn
     import time
