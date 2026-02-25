@@ -1,4 +1,40 @@
+# Core FastAPI dependencies
 fastapi==0.104.1
 uvicorn[standard]==0.24.0
 python-multipart==0.0.6
-networkx==3.2
+
+# Development and testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+
+# Configuration and environment
+python-dotenv==1.0.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# Logging and monitoring
+structlog==23.2.0
+
+# Type checking and linting (optional)
+mypy==1.7.1
+black==23.11.0
+flake8==6.1.0
+
+# Network analysis (for advanced features)
+networkx==3.2.1
+
+# Async HTTP client (for future AI integration)
+httpx==0.25.2
+
+# Future database support (optional)
+# sqlalchemy==2.0.23
+# alembic==1.13.0
+# psycopg2-binary==2.9.9
+
+# Future caching support (optional)  
+# redis==5.0.1
+
+# Future AI integration (uncomment when ready)
+# anthropic==0.7.8
+# openai==1.3.8
