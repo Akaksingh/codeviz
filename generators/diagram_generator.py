@@ -5,17 +5,7 @@ logger = logging.getLogger(__name__)
 
 
 class MermaidGenerator:
-    """
-    Advanced Mermaid diagram generator for code architecture visualization.
-    
-    Generates multiple diagram types:
-    1. Class diagrams - show classes, methods, inheritance
-    2. Dependency graphs - show import relationships  
-    3. Component diagrams - high-level architecture overview
-    4. Function call diagrams - show function call flow
-    
-    Mermaid is a text-based diagram tool that renders in browsers/GitHub.
-    """
+
     
     def __init__(self):
         self.colors = {
@@ -28,26 +18,7 @@ class MermaidGenerator:
 
 
 def generate_class_diagram(classes: List[Dict], relationships: Dict) -> str:
-    """
-    Converts class data into Mermaid class diagram syntax.
 
-    WHY MERMAID?
-    Mermaid is a text-based diagram tool. Instead of drawing boxes manually,
-    you write text like:
-        classDiagram
-            Animal <|-- Dog
-            class Dog {
-                +bark()
-            }
-    And it AUTO-RENDERS into a visual diagram.
-    We use it because it's easy to generate from code and renders in browsers.
-
-    Enhanced with:
-    - Method parameter display
-    - Visibility indicators (+/-)
-    - Method types (async, static, property)
-    - Better inheritance arrow handling
-    """
     lines = ["classDiagram"]
 
     # Add each class with detailed method information
