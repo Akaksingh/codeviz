@@ -32,7 +32,6 @@ app = FastAPI(
     redoc_url="/redoc",
 )
 
-# Enhanced CORS middleware
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Configure properly for production
@@ -48,13 +47,12 @@ async def log_requests(request, call_next):
     """Log all requests and responses for monitoring"""
     start_time = time.time()
     
-    # Log request
+
     logger.info(f"Request: {request.method} {request.url.path}")
     
-    # Process request
     response = await call_next(request)
     
-    # Log response
+
     process_time = time.time() - start_time
     logger.info(f"Response: {response.status_code} - {process_time:.3f}s")
     
