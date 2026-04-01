@@ -17,7 +17,7 @@ class MermaidGenerator:
         }
 
 
-def generate_class_diagram(classes: List[Dict], relationships: Dict) -> str:
+def generate_class_diagram(classes: List[Dic], relationships: Dict) -> str:
 
     lines = ["classDiagram"]
 
