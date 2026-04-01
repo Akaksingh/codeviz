@@ -3,8 +3,6 @@ import ast
 import sys
 import os
 from unittest.mock import patch, MagicMock
-
-# Add project root to path
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
@@ -19,19 +17,7 @@ from generators.diagram_generator import (
 )
 
 
-class TestCodeAnalyzer(unittest.TestCase):
-    """
-    Comprehensive unit tests for the Python code analyzer.
-    
-    Tests various scenarios:
-    - Basic class and function detection
-    - Method vs function distinction  
-    - Inheritance relationships
-    - Import statements
-    - Edge cases (empty files, syntax errors)
-    - Type annotations and decorators
-    - Async functions and properties
-    """
+class TestCodeAnalyzer(unittest.Test
     
     def setUp(self):
         """Set up test fixtures before each test method."""
@@ -59,24 +45,23 @@ class TestClass:
         
         result = analyze_file(code, "test.py")
         
-        # Check class detection
+        
         self.assertEqual(len(result["classes"]), 1)
         class_data = result["classes"][0]
         self.assertEqual(class_data["name"], "TestClass")
         self.assertEqual(class_data["docstring"], "A simple test class")
         
-        # Check methods
+        
         method_names = [method["name"] for method in class_data["methods"]]
         self.assertIn("__init__", method_names)
         self.assertIn("get_name", method_names) 
         self.assertIn("_private_method", method_names)
         self.assertIn("display_name", method_names)
         
-        # Check property decorator
+        
         display_method = next(m for m in class_data["methods"] if m["name"] == "display_name")
         self.assertTrue(display_method["is_property"])
         
-        # Ensure no functions detected (they're all methods)
         self.assertEqual(len(result["functions"]), 0)
     
     def test_inheritance_detection(self):
