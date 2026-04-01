@@ -17,7 +17,7 @@ from generators.diagram_generator import (
 from parsers.python_parsers import analyze_file
 from parsers.relationship_detector import RelationshipDetector
 
-# Configure logging
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
@@ -83,9 +83,7 @@ async def home():
 
 @app.get("/health")
 async def health_check():
-    """
-    Health check endpoint for monitoring and deployment.
-    """
+
     try:
         # Basic health indicators
         import sys
@@ -108,22 +106,6 @@ async def health_check():
 
 @app.post("/analyze")
 async def analyze_code(file: UploadFile = File(...)) -> Dict[str, Any]:
-    """
-    Comprehensive Python code analysis endpoint.
-    
-    Analyzes uploaded file and returns:
-    - Classes with methods, inheritance, and metadata
-    - Top-level functions with parameters and type hints  
-    - Import statements and dependencies
-    - Relationships (inheritance, calls, composition)
-    - Summary statistics and complexity metrics
-    
-    Args:
-        file: Python file (.py extension required)
-        
-    Returns:
-        JSON with complete analysis results
-    """
     # Validate file upload
     if not file.filename:
         raise HTTPException(
@@ -239,23 +221,7 @@ async def generate_diagrams(
         description="Include full analysis data in response"
     )
 ) -> Dict[str, Any]:
-    """
-    Generate Mermaid diagrams from uploaded Python file.
-    
-    Supported diagram types:
-    - class: Class diagram with inheritance and methods
-    - dependency: Import dependency graph
-    - component: High-level architecture overview
-    - calls: Function call flow diagram
-    
-    Args:
-        file: Python file (.py extension required)
-        diagram_type: Type of diagram to generate
-        include_analysis: Whether to include full analysis in response
-        
-    Returns:
-        JSON with Mermaid diagram syntax and metadata
-    """
+
     # Validate file
     if not file.filename or not file.filename.endswith(".py"):
         raise HTTPException(
