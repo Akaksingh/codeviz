@@ -7,11 +7,13 @@ logger = logging.getLogger(__name__)
 
 class CodeAnalyzer(ast.NodeVisitor):
     """
+    ### will check if anything else can be included
     AST-based Python code analyzer that extracts:
     - Classes (with methods, attributes, inheritance)
     - Top-level functions (excluding class methods)
     - Import statements
     - Docstrings and metadata
+    what else can be included  i will hahev to see that 
     
     Uses the Visitor Pattern to traverse the Abstract Syntax Tree.
     
