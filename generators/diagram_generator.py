@@ -4,9 +4,7 @@ import logging
 logger = logging.getLogger(__name__)
 
 
-class MermaidGenerator:
-
-    
+class MermaidGenerator:  
     def __init__(self):
         self.colors = {
             "class": "#e1f5fe",
